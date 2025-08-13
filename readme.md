@@ -56,17 +56,20 @@ Place your CSV dataset inside the datasets/ folder, for example:
 datasets/my_dataset.csv
 
 1) Run without analysis (default: skipped)
-bash
+```bash
 
 python main.py --dataset datasets/my_dataset.csv
+```
 2) Run with analysis
 ```bash
 
-python main.py --dataset datasets/my_dataset.csv --analyze```
+python main.py --dataset datasets/my_dataset.csv --analyze
+```
 3) Specify the label column (example: labels)
 ```bash
 
-python main.py --dataset datasets/my_dataset.csv --analyze --label-column labels```
+python main.py --dataset datasets/my_dataset.csv --analyze --label-column labels
+```
 4) Useful options
 ```bash
 
@@ -80,7 +83,9 @@ python main.py --dataset datasets/my_dataset.csv --analyze --numeric-bins 40
 python main.py --dataset datasets/my_dataset.csv --analyze --max-num-plots 10 --max-cat-plots 8
 
 # Do not save HTML overview
-python main.py --dataset datasets/my_dataset.csv --analyze --no-html```
+python main.py --dataset datasets/my_dataset.csv --analyze --no-html
+
+```
 
 ## 📊 Output Structure
 When analysis is enabled, results are saved in:
@@ -99,22 +104,22 @@ When analysis is enabled, results are saved in:
     - `schema.yaml`
     - `overview.html` – only if not disabled
 
-🔬 Next Steps
+## 🔬 Next Steps
 This framework will be extended to:
 
-Automatically train Random Forest models on the dataset
+- Automatically train Random Forest models on the dataset
 
-Perform multiple trials with:
+- Perform multiple trials with:
 
-Different tree counts
+    - Different tree counts
 
-Different subsets of features
+    - Different subsets of features
 
-Various preprocessing strategies
+    - Various preprocessing strategies
 
-Compare results automatically
+    - Compare results automatically
 
-🧪 GitHub Actions CI
+## 🧪 GitHub Actions CI
 A CI workflow runs on every push and pull request:
 
 Lints the code with ruff
@@ -123,5 +128,5 @@ Creates a sample dataset
 
 Runs a “dry-run” analysis in headless mode (no HTML overview)
 
-📜 License
+## 📜 License
 MIT License – you are free to use, modify, and distribute this code for any purpose.
