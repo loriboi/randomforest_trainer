@@ -45,12 +45,12 @@ python -c "import pandas, numpy, matplotlib, yaml; print('OK')"
 
 If you prefer manual setup:
 
-bash
+```bash
 
 conda create -n mlframework python=3.10 -y
 conda activate mlframework
 pip install pandas numpy matplotlib pyyaml
-
+```
 ▶️ Usage
 Place your CSV dataset inside the datasets/ folder, for example:
 datasets/my_dataset.csv
@@ -60,15 +60,15 @@ bash
 
 python main.py --dataset datasets/my_dataset.csv
 2) Run with analysis
-bash
+```bash
 
-python main.py --dataset datasets/my_dataset.csv --analyze
+python main.py --dataset datasets/my_dataset.csv --analyze```
 3) Specify the label column (example: labels)
-bash
+```bash
 
-python main.py --dataset datasets/my_dataset.csv --analyze --label-column labels
+python main.py --dataset datasets/my_dataset.csv --analyze --label-column labels```
 4) Useful options
-bash
+```bash
 
 # Top-k categories for frequency analysis
 python main.py --dataset datasets/my_dataset.csv --analyze --freq-top-k 30
@@ -80,25 +80,25 @@ python main.py --dataset datasets/my_dataset.csv --analyze --numeric-bins 40
 python main.py --dataset datasets/my_dataset.csv --analyze --max-num-plots 10 --max-cat-plots 8
 
 # Do not save HTML overview
-python main.py --dataset datasets/my_dataset.csv --analyze --no-html
-📊 Output Structure
+python main.py --dataset datasets/my_dataset.csv --analyze --no-html```
+
+## 📊 Output Structure
 When analysis is enabled, results are saved in:
 
-pgsql
+- `dataset_analisys/`
+  - `my_dataset/`
+    - **tables/**
+      - `column_types.csv`
+      - `numeric_stats.csv`
+      - `categorical_<col>.csv`
+      - `label_distribution.csv` – only if `--label-column` is valid
+    - **figures/**
+      - `label_balance.png` – only if `--label-column` is valid
+      - `hist_<numcol>.png`
+      - `freq_<catcol>.png`
+    - `schema.yaml`
+    - `overview.html` – only if not disabled
 
-dataset_analisys/
-└── my_dataset/
-    ├── tables/
-    │   ├── column_types.csv
-    │   ├── numeric_stats.csv
-    │   ├── categorical_<col>.csv
-    │   └── label_distribution.csv       # only if --label-column is valid
-    ├── figures/
-    │   ├── label_balance.png             # only if --label-column is valid
-    │   ├── hist_<numcol>.png
-    │   └── freq_<catcol>.png
-    ├── schema.yaml
-    └── overview.html                     # if not disabled
 🔬 Next Steps
 This framework will be extended to:
 
