@@ -7,7 +7,17 @@ Designed to be modular so that dataset analysis, preprocessing, and model traini
 
 ## 📦 Project Structure
 
-<pre> ``` . ├── dataset_analysis.py # Toolkit: profiling, charts, YAML schema, profile_dataset() ├── main.py # CLI entrypoint (run with --analyze to profile the dataset) ├── datasets/ # Default location for input datasets (ignored by git) │ └── .gitkeep ├── dataset_analisys/ # Default output folder for analysis results (ignored by git) │ └── .gitkeep ├── environment.yml # Conda environment definition ├── .github/workflows/ci.yml # GitHub Actions CI workflow ├── LICENSE # MIT License └── README.md ``` </pre>
+- `dataset_analysis.py` – Toolkit: profiling, charts, YAML schema, `profile_dataset()`
+- `main.py` – CLI entrypoint (run with `--analyze` to profile the dataset)
+- `datasets/` – Default location for input datasets (ignored by git)
+  - `.gitkeep`
+- `dataset_analisys/` – Default output folder for analysis results (ignored by git)
+  - `.gitkeep`
+- `environment.yml` – Conda environment definition
+- `.github/workflows/ci.yml` – GitHub Actions CI workflow
+- `LICENSE` – MIT License
+- `README.md`
+
 
 
 ---
