@@ -1,0 +1,25 @@
+# Python cache / build / editor junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Virtual environments
+.env
+.venv
+.envrc
+
+# Datasets (ignore all files but keep .gitkeep)
+datasets/*
+!datasets/.gitkeep
+
+# Analysis outputs (ignore all files but keep .gitkeep)
+dataset_analisys/*
+!dataset_analisys/.gitkeep
