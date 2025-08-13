@@ -41,6 +41,7 @@ conda activate mlframework
 # (Optional) verify versions
 python -V
 python -c "import pandas, numpy, matplotlib, yaml; print('OK')"
+```
 
 If you prefer manual setup:
 
